@@ -1,3 +1,10 @@
+/**
+ * This script queries the local API for all workplaces and shifts, then
+ * calculates which active workplaces have hosted the most completed shifts.
+ * A shift is counted when it has a worker assigned, hasn't been cancelled and
+ * its end time is in the past. The top three workplaces are output as JSON
+ * with their names and shift counts.
+ */
 import fetch from "node-fetch";
 
 const API_BASE = "http://localhost:3000";
